@@ -1,0 +1,273 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/*  
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+html
+{
+    font-size: 62,5%;
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    
+    
+
+}
+h1 h2 h3 h4 h5 h6
+{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 6rem;
+    
+}
+h2 {
+    font-size: 5.5rem;
+}
+h3{
+    font-size: 5.0rem;
+}
+h4{
+    font-size: 4.5rem;
+}
+h5{
+    font-size: 4.0rem;
+}
+h6{
+    font-size: 3.5rem;
+}
+a{
+    text-decoration: none;
+}
+
+.menu-spacing{
+    height: 4.18rem;
+}
+.main-bg{
+    background-image: url('../img/main-bg2.svg'); 
+    background-size: auto;
+    background-position: center center;
+    color: aliceblue;
+}
+.menu-bg{
+    background-image: url('../img/menu-bg.svg');
+    background-size: auto;
+    background-position: center center;
+    }
+.white-bg{
+    background-color: white;
+    background-size: auto;
+    background-position: center center;
+    color: black;
+}
+.main-size{
+    min-height: 100vh;
+    
+}
+.alternate-size{
+    min-height: 150vh;
+
+}
+.main-content{
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 3rem;
+    
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    
+}
+.menu{
+    position: fixed;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid gray;
+    z-index: 1;
+    
+}
+.menu-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+.menu ul li a{
+    display: block;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    color: dimgray;
+    position: relative;
+}
+.menu h1{
+    font-size: 2.3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu h1 a{
+    color: dimgrey;
+    position: relative;
+}
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    height: 0.2rem;
+    width: 0%;
+    background: blueviolet;
+    transition: all 300ms ease-in-out;
+
+}
+.menu ul li a:hover::after{
+    width: 80%;
+    left: 10%;
+}
+.menu h1 a::after{
+    content: '';
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    height: 0.2rem;
+    width: 0%;
+    background: blueviolet;
+    transition: all 300ms ease-in-out;
+
+}
+.menu h1 a:hover::after{
+    width: 100%;
+    left: 0%;
+}
+.page1 {
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    min-height: 100vh;
+}
+.page1-content, .page1-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100%;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform:initial;
+}
+.page1-content h2{
+    margin-bottom: 2rem;
+} 
+.page1-content p{
+    margin-bottom: 8rem;
+}
+.page1-img img{
+  position: relative;
+  top: 4.9rem;
+  max-width: 100%;
+  min-height: 500px;
+}
+.top-moments
+{
+    position: relative;
+    top: -3rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 100vh;
+    text-align: center;
+    max-width: 60rem;
+}
+p{
+    margin-bottom: 3rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    counter-reset: grid-counter;
+}
+.grid h2::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -1rem;
+    left: -2rem;
+    transform: rotate(8deg);
+}
+.grid h2{
+    font-size: 2rem;
+    position: relative;
+    padding-left: 3.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 4rem;
+}
+.about-top3{
+    position: relative;
+    padding-top: 3rem;
+}
+.grid p{
+    position: relative;
+    top: 3rem;
+}
+.galery-img{
+    width: 100%;
+   max-width: 360px;
+   max-height: 360px;
+   overflow: hidden;
+}
+.galery-img img{
+    transition: all 500ms ease-in-out;
+}
+.galery-img img:hover{
+    transform:translate(3%,3%) rotate(5deg) scale(1.2);
+}
+
+.grid-gallery{
+    position: relative;
+    top: -2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.responsive-table{
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table td, table th{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(49, 49, 49);
+}
+
+tfoot td{
+    background-color:rgb(128, 125, 125)
+}
+table caption{
+    font-size: 0.8rem;
+    font-style: italic;
+}
